@@ -1,6 +1,6 @@
 {
-  "name": "hubot-status",
-  "description": "Hubot script for querying Flowdock status",
+  "name": "hubot-command",
+  "description": "Hubot script for running commands",
   "version": "8.0.0",
   "author": "Team Flowdock",
   "private": true,
