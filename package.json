@@ -16,7 +16,8 @@
   },
 
   "dependencies": {
-    "coffee-script": "~1.6"
+    "coffee-script": "~1.6",
+    "underscore": "~1.7"
   },
 
   "main": "index.coffee"
