@@ -1,0 +1,23 @@
+{
+  "name": "hubot-status",
+  "description": "Hubot script for querying Flowdock status",
+  "version": "8.0.0",
+  "author": "Team Flowdock",
+  "private": true,
+
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/flowdock/hubot-status.git"
+  },
+
+  "dependencies": {
+    "coffee-script": "~1.6"
+  },
+
+  "main": "index.coffee",
+}
