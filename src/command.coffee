@@ -10,12 +10,12 @@ module.exports = (robot) ->
     indent = (str) ->
       '    ' + str.split('\n').join('\n    ')
     if command = k.match(/npm_package_config_hubot_command_(\w+)/)?[1]
-      console.log 'registering command', command
-      robot.respond new RegExp(command.replace(/_/, '\\s+'), 'i'), (msg) ->
-        console.log 'running', v
+      robot.logger.info 'Registering command "' + command.replace(/_/g, ' ') + '"'
+      robot.respond new RegExp(command.replace(/_/g, '\\s+'), 'i'), (msg) ->
+        robot.logger.info 'Running command', v
         child_process.exec v, {}, (error, out, err) ->
           if error
             msg.send indent(err)
           else
-            console.log 'success'
             msg.send indent(out)
+      robot.commands.push "Hubot " + command.replace(/_/g, ' ') + ' - Run shell command "' + v + '"'
