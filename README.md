@@ -2,28 +2,23 @@
 
 Run shell commands from hubot.
 
-The commands to be run should be defined in the `package.json` of your
-hubot instance. The following example will register two commands:
-`runme one` and `runme two` to hubot. Generally any amount of nesting
-can be done.
+The commands to be run should be defined in the `command.json` in your
+hubot dir. The following example will register two commands:
+`runme one` and `runme two` to hubot.
 
 ```
-"config": {
-    "hubot-command": {
-        "runme":
-            "one": "echo 'one'",
-            "two": "echo 'two'"
-        }
-    }
+{
+    "runme one": "echo 'one'",
+    "runme two": "echo 'two'"
 }
 ```
 
-
-
-hubot needs to be started with `npm start` so that the environment variables are read from the `package.json` so you will need to define also a start script in your `package.json`. If you are using just the standard hubot startup script then add this:
+The you can call them using
 
 ```
-"scripts": {
-    "start": "bin/hubot"
-}
+# print whan commands can be run
+hubot command
+
+# run "runme one", hubot will respond "one"
+hubot runme one
 ```
