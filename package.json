@@ -1,8 +1,8 @@
 {
   "name": "hubot-command",
   "description": "Hubot script for running commands",
-  "version": "8.0.0",
-  "author": "Team Flowdock",
+  "version": "1.0.0",
+  "author": "Flowdock <team@flowdock.com>",
   "private": true,
 
   "keywords": [
@@ -16,8 +16,7 @@
   },
 
   "dependencies": {
-    "coffee-script": "~1.6",
-    "underscore": "~1.7"
+    "coffee-script": "~1.6"
   },
 
   "main": "index.coffee"
